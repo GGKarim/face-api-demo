@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+header{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  text-align: center;
+background: #1A2980;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  box-shadow: 0px 4px 30px -10px rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+header h1{
+  font-weight: 200;
+  color: #f2f2f2;
+  font-size: 2rem;
+}
+
+#input {
+  padding: 18px 6px 3px 6px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(34,198,227,1);
+}
+
+.text {
+  font-weight: 400;
+  text-align: center;
+}
+
+.text h3 {
+  color: #444;
+  margin: 18px 6px;
+}
+
+#analyseButton {
+  cursor:pointer;
+  border: none;
+  outline: none;
+    color: #f2f2f2;
+background: #1a2980;
+  padding: 12px 28px;
+  margin: 12px auto;
+  box-shadow: 0px 4px 30px -10px rgba(0,0,0,0.5);
+}
+
+#analyseButton:active {
+  transform: translateY(1px);
+  box-shadow: 0p 4px 5px -10px rgba(0,0,0,0);
+}
+
+#sourceImage {
+  visibility: hidden;
+  align-self: flex-end;
+  background: cover;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 2px 30px -15px rgba(0,0,0,0.5);
+}
+
+.btn-section {
+  width: 100px;
+  margin: 12px auto;
+}
+
+.results {
+  background-color: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 12px auto;
+  box-shadow: 0px 5px 50px -20px rgba(0,0,0,0.5);
+}
+
+.results h3 {
+  font-size: 2em;
+  margin-bottom: 12px;
+}
+
+.left-side{
+  text-align: center;
+  margin: auto;
+}
+
+/*Add ClassList */
+.animateImage {
+  animation: imageAnim 1s forward;
+}
+
+/*Animations*/
+@keyframes imageAnim {
+  0%{
+    opacity: 0;
+  }
+  
+  100%{
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 901px){
+  .results{
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+  .results{
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .results{
+    width: 100%;
+  }
+}
