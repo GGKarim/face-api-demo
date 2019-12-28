@@ -18,7 +18,7 @@ function analyze(){
     headers: myHeader
   }
   
-  let request = new Request('/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,emotion', initObject);
+  let request = new Request('ACCESS_URL/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age,gender,emotion', initObject);
   
   fetch(request).then(function(response){
     if(response.ok){
